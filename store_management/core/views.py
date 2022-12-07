@@ -7,8 +7,8 @@ from django.contrib.auth.models import User
 from lib.log import log
 
 class Index(View):
-    def get(self, request):
-        return render(request, 'core/index.html')
+    def get(self, request, id):
+        return render(request, 'core/index.html', {"id":id})
 
 class login(View):
     def get(self, request):
